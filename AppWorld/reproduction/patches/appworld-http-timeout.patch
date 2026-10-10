@@ -1,0 +1,21 @@
+diff --git a/experiments/code/simplified/language_model.py b/experiments/code/simplified/language_model.py
+index c3ba3ab..b6d0c5d 100644
+--- a/experiments/code/simplified/language_model.py
++++ b/experiments/code/simplified/language_model.py
+@@ -181,6 +181,7 @@ def non_cached_lm_call(
+     thinking: dict[str, Any] | None = None,
+     base_url: str | None = None,
+     api_version: str | None = None,
++    timeout: float | None = None,
+     api_key: str | None = None,
+     model_list: list[Any] | None = None,
+     custom_llm_provider: str | None = None,
+@@ -197,6 +198,8 @@ def non_cached_lm_call(
+         raise ValueError(f"Unexpected kwargs in non_cached_lm_call: {kwargs}")
+     kwargs["model"] = model
+     kwargs["messages"] = messages
++    if timeout is not None:
++        kwargs["timeout"] = timeout
+     if frequency_penalty is not None:
+         kwargs["frequency_penalty"] = frequency_penalty
+     if logprobs is not None:

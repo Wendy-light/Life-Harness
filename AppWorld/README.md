@@ -1,5 +1,9 @@
 # Life-Harness for AppWorld
 
+For the portable SGLang reproduction setup, five-task compatibility pilot,
+baseline/harness dev57 runner, and recorded results, see
+[reproduction/README.md](reproduction/README.md).
+
 This adapter follows Life-Harness's four lifecycle layers while leaving the
 model, AppWorld transition function, tasks, and evaluator unchanged.
 

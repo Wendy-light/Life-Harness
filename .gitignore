@@ -1,4 +1,7 @@
 .DS_Store
+local-logs/
+AppWorld/reproduction/local-runs/
+AppWorld/reproduction/.runtime/
 .env
 .venv/
 env/
